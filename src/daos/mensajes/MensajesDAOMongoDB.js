@@ -1,6 +1,6 @@
 import ContenedorMongoDb from '../../container/ContenedorMongoDb.js';
 
-class MessagesDAOMongoDB extends ContenedorMongoDb {
+class MensajesDaoMongoDb extends ContenedorMongoDb {
   constructor() {
     super('mensajes', {
       email: { type: String, required: true },
@@ -9,4 +9,4 @@ class MessagesDAOMongoDB extends ContenedorMongoDb {
   }
 }
 
-export default MessagesDAOMongoDB;
+export default MensajesDaoMongoDb;
