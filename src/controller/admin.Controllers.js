@@ -39,7 +39,7 @@ export const postUpdate = async (req, res) => {
       thumbnail: thumbnail,
     };
 
-    await productsApi.actualizar(id, updatedProduct);
+    await productosDao.actualizar(id, updatedProduct);
 
     res.redirect('/admin/home', { user: req.session.passport?.user });
   }
