@@ -4,9 +4,8 @@ class MensajesDaoMongoDb extends ContenedorMongoDb {
   constructor() {
     super('mensajes', {
       email: { type: String, required: true },
-      messages: { type: Array},
+      messages: { type: Array },
     });
   }
 }
-
 export default MensajesDaoMongoDb;
