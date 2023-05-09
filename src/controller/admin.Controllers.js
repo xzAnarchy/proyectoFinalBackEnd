@@ -40,7 +40,8 @@ export const postUpdate = async (req, res) => {
     };
 
     await productosDao.actualizar(id, updatedProduct);
-    res.redirect('/admin/home', { user: req.session.passport?.user });
+    logger.info('Producto actualizado');
+    res.redirect('/admin/home');
   }
 };
 
