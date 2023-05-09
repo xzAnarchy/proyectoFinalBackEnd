@@ -29,7 +29,7 @@ export const postUpdate = async (req, res) => {
   const id = req.params.id;
 
   if (!req.session.passport?.user) {
-    res.render('auth/login.ejs');
+    res.render('pages/login.ejs');
   } else {
     const updatedProduct = {
       product: product,
