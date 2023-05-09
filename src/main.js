@@ -13,6 +13,7 @@ import { logout } from './routes/logout.js'
 import { profile } from './routes/profile.js'
 import { chat } from './routes/chat.js'
 import {adminWebRouter} from './routes/admin.js'
+import { apiProducts } from './api/products.js'
 import yargs from 'yargs'
 import cluster from 'cluster'
 import { cpus } from 'os'
@@ -67,7 +68,9 @@ app.use('/home', home)
 app.use('/cart', cart)
 app.use('/profile', profile)
 app.use('/chat', chat)
+app.use('/api/products', apiProducts)
 app.use('/admin', adminWebRouter)
+
 app.get('*', (req, res) => {
     res.redirect('/login')
 })
